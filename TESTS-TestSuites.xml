@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="localhost" id="0" name="app_create_aewb_test" package="" tests="3" time="0.000" timestamp="2024-10-08T17:43:24">
+  <testsuite errors="0" failures="0" hostname="localhost" id="0" name="app_create_aewb_test" package="" tests="3" time="0.000" timestamp="2024-10-08T20:28:34">
     <properties>
 </properties>
 
-    <testcase assertions="28" classname="app_create_aewb_test" file="matthew_test.cpp" line="365" name="appIssGetDCCBuff2ANotSucess" time="0.000">
+    <testcase assertions="28" classname="app_create_aewb_test" file="matthew_test.cpp" line="370" name="appIssGetDCCBuff2ANotSucess" time="0.000">
 </testcase>
 
-    <testcase assertions="20" classname="app_create_aewb_test" file="matthew_test.cpp" line="312" name="dcc_buff_size_Equal0" time="0.000">
+    <testcase assertions="20" classname="app_create_aewb_test" file="matthew_test.cpp" line="317" name="dcc_buff_size_Equal0" time="0.000">
 </testcase>
 
-    <testcase assertions="26" classname="app_create_aewb_test" file="matthew_test.cpp" line="248" name="FailureAtvxMapUserDataObject" time="0.000">
+    <testcase assertions="26" classname="app_create_aewb_test" file="matthew_test.cpp" line="253" name="FailureAtvxMapUserDataObject" time="0.000">
 </testcase>
 
     <system-out />
@@ -18,14 +18,14 @@
     <system-err />
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="localhost" id="1" name="app_send_test_frame" package="" tests="2" time="0.000" timestamp="2024-10-08T17:43:24">
+  <testsuite errors="0" failures="0" hostname="localhost" id="1" name="app_send_test_frame" package="" tests="2" time="0.000" timestamp="2024-10-08T20:28:34">
     <properties>
 </properties>
 
-    <testcase assertions="3" classname="app_send_test_frame" file="matthew_test.cpp" line="96" name="Fail" time="0.000">
+    <testcase assertions="3" classname="app_send_test_frame" file="matthew_test.cpp" line="101" name="Fail" time="0.000">
 </testcase>
 
-    <testcase assertions="3" classname="app_send_test_frame" file="matthew_test.cpp" line="83" name="Success" time="0.000">
+    <testcase assertions="3" classname="app_send_test_frame" file="matthew_test.cpp" line="88" name="Success" time="0.000">
 </testcase>
 
     <system-out />
@@ -33,11 +33,17 @@
     <system-err />
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="localhost" id="2" name="write_output_image_yuv422_8bit" package="" tests="2" time="0.000" timestamp="2024-10-08T17:43:24">
+  <testsuite errors="0" failures="1" hostname="localhost" id="2" name="write_output_image_yuv422_8bit" package="" tests="3" time="0.001" timestamp="2024-10-08T20:28:34">
     <properties>
 </properties>
 
-    <testcase assertions="1" classname="write_output_image_yuv422_8bit" file="matthew_test.cpp" line="51" name="FailOpenFile" time="0.000">
+    <testcase assertions="1" classname="write_output_image_yuv422_8bit" file="matthew_test.cpp" line="63" name="FailTest" time="0.000">
+      <failure message="matthew_test.cpp:64: This test is not implemented yet" type="AssertionFailedError">
+</failure>
+
+    </testcase>
+
+    <testcase assertions="1" classname="write_output_image_yuv422_8bit" file="matthew_test.cpp" line="51" name="FailOpenFile" time="0.001">
 </testcase>
 
     <testcase assertions="3" classname="write_output_image_yuv422_8bit" file="matthew_test.cpp" line="37" name="PassWriteFile" time="0.000">
