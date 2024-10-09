@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2024-10-08 20:28:37</td>
+            <td class="headerValue">2024-10-09 21:19:03</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">2</td>
@@ -106,7 +106,7 @@
 <a name="44"><span class="lineNum">      44 </span>            :     virtual MockExpectedCall&amp; withCallOrder(unsigned int)=0;</a>
 <a name="45"><span class="lineNum">      45 </span>            :     virtual MockExpectedCall&amp; withCallOrder(unsigned int, unsigned int)=0;</a>
 <a name="46"><span class="lineNum">      46 </span>            :     MockExpectedCall&amp; withParameter(const SimpleString&amp; name, bool value) { return withBoolParameter(name, value); }</a>
-<a name="47"><span class="lineNum">      47 </span><span class="lineCov">          5 :     MockExpectedCall&amp; withParameter(const SimpleString&amp; name, int value) { return withIntParameter(name, value); }</span></a>
+<a name="47"><span class="lineNum">      47 </span><span class="lineCov">         10 :     MockExpectedCall&amp; withParameter(const SimpleString&amp; name, int value) { return withIntParameter(name, value); }</span></a>
 <a name="48"><span class="lineNum">      48 </span>            :     MockExpectedCall&amp; withParameter(const SimpleString&amp; name, unsigned int value) { return withUnsignedIntParameter(name, value); }</a>
 <a name="49"><span class="lineNum">      49 </span>            :     MockExpectedCall&amp; withParameter(const SimpleString&amp; name, long int value) { return withLongIntParameter(name, value); }</a>
 <a name="50"><span class="lineNum">      50 </span>            :     MockExpectedCall&amp; withParameter(const SimpleString&amp; name, unsigned long int value) { return withUnsignedLongIntParameter(name, value); }</a>
@@ -115,7 +115,7 @@
 <a name="53"><span class="lineNum">      53 </span>            :     MockExpectedCall&amp; withParameter(const SimpleString&amp; name, double value) { return withDoubleParameter(name, value); }</a>
 <a name="54"><span class="lineNum">      54 </span>            :     MockExpectedCall&amp; withParameter(const SimpleString&amp; name, double value, double tolerance) { return withDoubleParameter(name, value, tolerance); }</a>
 <a name="55"><span class="lineNum">      55 </span>            :     MockExpectedCall&amp; withParameter(const SimpleString&amp; name, const char* value) { return withStringParameter(name, value); }</a>
-<a name="56"><span class="lineNum">      56 </span><span class="lineCov">         28 :     MockExpectedCall&amp; withParameter(const SimpleString&amp; name, void* value) { return withPointerParameter(name, value); }</span></a>
+<a name="56"><span class="lineNum">      56 </span><span class="lineCov">         56 :     MockExpectedCall&amp; withParameter(const SimpleString&amp; name, void* value) { return withPointerParameter(name, value); }</span></a>
 <a name="57"><span class="lineNum">      57 </span>            :     MockExpectedCall&amp; withParameter(const SimpleString&amp; name, const void* value) { return withConstPointerParameter(name, value); }</a>
 <a name="58"><span class="lineNum">      58 </span>            :     MockExpectedCall&amp; withParameter(const SimpleString&amp; name, void (*value)()) { return withFunctionPointerParameter(name, value); }</a>
 <a name="59"><span class="lineNum">      59 </span>            :     MockExpectedCall&amp; withParameter(const SimpleString&amp; name, const unsigned char* value, size_t size) { return withMemoryBufferParameter(name, value, size); }</a>
