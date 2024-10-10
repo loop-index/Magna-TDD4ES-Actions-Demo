@@ -2,8 +2,8 @@
 CPPUTEST_HOME = /usr
 CPPFLAGS += -I$(CPPUTEST_HOME)/include
 
-# CXXFLAGS += -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorNewMacros.h
-# CFLAGS += -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorMallocMacros.h
+CXXFLAGS += -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorNewMacros.h
+CXXFLAGS += -include $(CPPUTEST_HOME)/include/CppUTest/MemoryLeakDetectorMallocMacros.h
 
 LD_LIBRARIES = -L$(CPPUTEST_HOME)/lib -lCppUTest -lCppUTestExt
 
@@ -36,5 +36,10 @@ clean:
 	rm -f *.gcda
 	rm -f *.gcno
 	rm -f *.info
-	rm -r html/
-	rm -r xml/
+	rm -rf html/
+	rm -rf xml/
+
+report: $(TARGET)
+	mkdir -p xml
+	-cd xml/; ../$(TARGET) -ojunit -v -c -k TDD4ES.Demo
+	ant convert

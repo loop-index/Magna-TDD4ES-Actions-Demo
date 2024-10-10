@@ -56,8 +56,27 @@ TEST(write_output_image_yuv422_8bit, FailOpenFile) {
 
     CHECK_EQUAL(-1, result);
 
-
     mock().checkExpectations();
+}
+
+TEST_GROUP(fail_demo)
+{
+    void setup() {
+    }
+
+    void teardown() {
+        mock().clear();
+    }
+};
+
+TEST(fail_demo, FailTest)
+{
+    FAIL("This is a fail test");
+}
+
+TEST(fail_demo, MemoryLeakTest)
+{
+    int* ptr = (int*)malloc(sizeof(int));
 }
 
 //implementation of app_send_test_frame function
