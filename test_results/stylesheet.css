@@ -4,7 +4,7 @@ body {
     color:#000000;
 }
 table tr td, table tr th {
-    font-size: 68%;
+    font-size: 100%;
 }
 table.details tr th{
     font-weight: bold;
@@ -20,19 +20,19 @@ p {
     margin-top:0.5em; margin-bottom:1.0em;
 }
 h1 {
-    margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+    margin: 0px 0px 5px; font: 200% verdana,arial,helvetica
 }
 h2 {
-    margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+    margin-top: 1em; margin-bottom: 0.5em; font: bold 180% verdana,arial,helvetica
 }
 h3 {
-    margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+    margin-bottom: 0.5em; font: bold 160% verdana,arial,helvetica
 }
 h4 {
-    margin-bottom: 0.5em; font: bold 100% verdana,arial,helvetica
+    margin-bottom: 0.5em; font: bold 140% verdana,arial,helvetica
 }
 h5 {
-    margin-bottom: 0.5em; font: bold 100% verdana,arial,helvetica
+    margin-bottom: 0.5em; font: bold 120S% verdana,arial,helvetica
 }
 h6 {
     margin-bottom: 0.5em; font: bold 100% verdana,arial,helvetica

@@ -1,42 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="1" hostname="localhost" id="0" name="app_create_aewb_test" package="" tests="3" time="0.001" timestamp="2024-10-09T21:25:37">
+  <testsuite errors="0" failures="0" hostname="localhost" id="0" name="app_create_aewb_test" package="" tests="3" time="0.000" timestamp="2024-10-10T02:34:46">
     <properties>
 </properties>
 
-    <testcase assertions="25" classname="app_create_aewb_test" file="matthew_test.cpp" line="366" name="appIssGetDCCBuff2ANotSucess" time="0.001">
-      <failure message="matthew_test.cpp:422: expected &lt;1&gt;{newline} but was  &lt;0&gt;{newline} difference starts at position 0 at: &lt;          0         &gt;{newline}                                                ^" type="AssertionFailedError">
+    <testcase assertions="28" classname="app_create_aewb_test" file="matthew_test.cpp" line="385" name="appIssGetDCCBuff2ANotSucess" time="0.000">
+</testcase>
+
+    <testcase assertions="20" classname="app_create_aewb_test" file="matthew_test.cpp" line="332" name="dcc_buff_size_Equal0" time="0.000">
+</testcase>
+
+    <testcase assertions="26" classname="app_create_aewb_test" file="matthew_test.cpp" line="268" name="FailureAtvxMapUserDataObject" time="0.000">
+</testcase>
+
+    <system-out />
+
+    <system-err />
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="localhost" id="1" name="app_send_test_frame" package="" tests="2" time="0.000" timestamp="2024-10-10T02:34:46">
+    <properties>
+</properties>
+
+    <testcase assertions="3" classname="app_send_test_frame" file="matthew_test.cpp" line="116" name="Fail" time="0.000">
+</testcase>
+
+    <testcase assertions="3" classname="app_send_test_frame" file="matthew_test.cpp" line="103" name="Success" time="0.000">
+</testcase>
+
+    <system-out />
+
+    <system-err />
+
+  </testsuite>
+  <testsuite errors="0" failures="2" hostname="localhost" id="2" name="fail_demo" package="" tests="2" time="0.000" timestamp="2024-10-10T02:34:46">
+    <properties>
+</properties>
+
+    <testcase assertions="0" classname="fail_demo" file="matthew_test.cpp" line="77" name="MemoryLeakTest" time="0.000">
+      <failure message="matthew_test.cpp:77: Memory leak(s) found.{newline}Alloc num (431) Leak size: 4 Allocated at: matthew_test.cpp and line: 79. Type: &quot;malloc&quot;{newline} Memory: &lt;0x55a893c92110&gt; Content:{newline}    0000: 12 24 40 c9                                      |.$@.|{newline}Total number of leaks:  1{newline}NOTE:{newline} Memory leak reports about malloc and free can be caused by allocating using the cpputest version of malloc,{newline} but deallocate using the standard free.{newline} If this is the case, check whether your malloc/free replacements are working (#define malloc cpputest_malloc etc).{newline}" type="AssertionFailedError">
 </failure>
 
     </testcase>
 
-    <testcase assertions="20" classname="app_create_aewb_test" file="matthew_test.cpp" line="313" name="dcc_buff_size_Equal0" time="0.000">
-</testcase>
+    <testcase assertions="1" classname="fail_demo" file="matthew_test.cpp" line="72" name="FailTest" time="0.000">
+      <failure message="matthew_test.cpp:74: This is a fail test" type="AssertionFailedError">
+</failure>
 
-    <testcase assertions="26" classname="app_create_aewb_test" file="matthew_test.cpp" line="249" name="FailureAtvxMapUserDataObject" time="0.000">
-</testcase>
-
-    <system-out />
-
-    <system-err />
-
-  </testsuite>
-  <testsuite errors="0" failures="0" hostname="localhost" id="1" name="app_send_test_frame" package="" tests="2" time="0.000" timestamp="2024-10-09T21:25:37">
-    <properties>
-</properties>
-
-    <testcase assertions="3" classname="app_send_test_frame" file="matthew_test.cpp" line="97" name="Fail" time="0.000">
-</testcase>
-
-    <testcase assertions="3" classname="app_send_test_frame" file="matthew_test.cpp" line="84" name="Success" time="0.000">
-</testcase>
+    </testcase>
 
     <system-out />
 
     <system-err />
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="localhost" id="2" name="write_output_image_yuv422_8bit" package="" tests="2" time="0.000" timestamp="2024-10-09T21:25:37">
+  <testsuite errors="0" failures="0" hostname="localhost" id="3" name="write_output_image_yuv422_8bit" package="" tests="2" time="0.000" timestamp="2024-10-10T02:34:46">
     <properties>
 </properties>
 
