@@ -66,6 +66,7 @@ jobs:
   generate-reports:
     needs: [build-and-test, build-and-test-optimized]
     runs-on: ubuntu-latest
+    permissions: read-all
 
     steps:
     - name: Download test results
