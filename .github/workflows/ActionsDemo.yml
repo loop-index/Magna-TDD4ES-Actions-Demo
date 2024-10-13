@@ -23,11 +23,6 @@ jobs:
     - name: Make CppUTest tests
       run: make -C TDD4ES/tests -B
 
-    - name: Create output directories
-      run: |
-        mkdir -p TDD4ES/tests/html
-        mkdir -p TDD4ES/tests/xml
-
     - name: Run CppUTests
       working-directory: TDD4ES/tests
       run: |
@@ -56,11 +51,6 @@ jobs:
     - name: Make CppUTest tests
       run: make -C TDD4ES/tests -B
 
-    - name: Create output directories
-      run: |
-        mkdir -p TDD4ES/tests/html
-        mkdir -p TDD4ES/tests/xml
-
     - name: Run CppUTests
       working-directory: TDD4ES/tests
       run: |
@@ -83,6 +73,12 @@ jobs:
       with:
         name: test-results-a
         path: TDD4ES/tests
+
+
+    - name: Create output directories
+      run: |
+        mkdir -p TDD4ES/tests/html
+        mkdir -p TDD4ES/tests/xml
 
     - name: Generate test report
       working-directory: TDD4ES/tests/xml
