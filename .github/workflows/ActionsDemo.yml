@@ -45,7 +45,7 @@ jobs:
     - name: Set up dependencies
       uses: awalsh128/cache-apt-pkgs-action@latest
       with: 
-        packages: gcc g++ make cpputest lcov ant
+        packages: gcc g++ make cpputest
         version: 1.0
   
     - name: Make CppUTest tests
@@ -74,6 +74,11 @@ jobs:
         name: test-results-a
         path: TDD4ES/tests
 
+    - name: Set up dependencies
+      uses: awalsh128/cache-apt-pkgs-action@latest
+      with: 
+        packages: lcov ant
+        version: 2.0
 
     - name: Create output directories
       run: |
