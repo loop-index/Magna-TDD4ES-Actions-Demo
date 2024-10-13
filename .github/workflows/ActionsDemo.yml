@@ -18,7 +18,7 @@ jobs:
     - name: Set up dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y gcc g++ make cpputest lcov ant
+        sudo apt-get install -y gcc g++ make cpputest
   
     - name: Make CppUTest tests
       run: make -C TDD4ES/tests -B
@@ -72,7 +72,7 @@ jobs:
     - name: Download test results
       uses: actions/download-artifact@v4
       with:
-        name: test-results-a
+        name: test-results-b
         path: TDD4ES/tests
 
     - name: Set up dependencies
