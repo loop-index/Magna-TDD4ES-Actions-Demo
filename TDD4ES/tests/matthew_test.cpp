@@ -10,8 +10,8 @@ const char* TIVX_TARGET_MCU2_0;
 
 
 //Implementation of write_output_image_yuv422_8bit function
-vx_int32 write_output_image_yuv422_8bit(char * file_name, vx_image out_yuv)
-{
+vx_int32 write_output_image_yuv422_8bit(char * file_name, vx_image out_yuv)   
+{ 
     FILE * fp = fopen(file_name, "wb");
     if(!fp)
     {
@@ -21,7 +21,7 @@ vx_int32 write_output_image_yuv422_8bit(char * file_name, vx_image out_yuv)
     vx_uint32 len1 = write_output_image_fp(fp, out_yuv);
     fclose(fp);
     APP_PRINTF("%d bytes written to %s\n", len1, file_name);
-    return len1;
+    return len1; 
 }
 
 TEST_GROUP(write_output_image_yuv422_8bit)
