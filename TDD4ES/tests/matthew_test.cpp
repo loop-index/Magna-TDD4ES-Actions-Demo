@@ -37,14 +37,14 @@ TEST_GROUP(write_output_image_yuv422_8bit)
 TEST(write_output_image_yuv422_8bit, PassWriteFile)
 {   
     const char* file_name = "test_img.jpeg";
-    vx_image test_image = nullptr;
+    vx_image test_image = nullptr; 
 
     mock().expectOneCall("write_output_image_fp").withParameter("out_nv12", test_image).ignoreOtherParameters().andReturnValue(1024);
     int result = write_output_image_yuv422_8bit((char*)file_name, test_image);
     CHECK_EQUAL(1024, result);
 
     mock().checkExpectations();
-
+  
     //test
 }
 
