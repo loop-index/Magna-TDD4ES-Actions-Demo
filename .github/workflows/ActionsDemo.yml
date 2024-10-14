@@ -87,7 +87,7 @@ jobs:
     - name: Set up dependencies
       uses: awalsh128/cache-apt-pkgs-action@latest
       with: 
-        packages: gcc g++ make cpputest lcov
+        packages: gcc g++ make cpputest
         version: 1.0
   
     - name: Make CppUTest tests
@@ -97,13 +97,6 @@ jobs:
       working-directory: TDD4ES/tests
       run: |
         ./all_tests -c -vv
-      continue-on-error: true
-
-    - name: Generate coverage report
-      working-directory: TDD4ES/tests
-      run: |
-        lcov --directory . --capture --output-file coverage.info --ignore-errors mismatch
-        genhtml coverage.info --output-directory html/coverage
       continue-on-error: true
 
     - name: Upload test results
@@ -149,6 +142,13 @@ jobs:
       working-directory: TDD4ES/tests
       run: |
         ant convert
+      continue-on-error: true
+    
+    - name: Generate coverage report
+      working-directory: TDD4ES/tests
+      run: |
+        lcov --directory . --capture --output-file coverage.info --ignore-errors mismatch
+        genhtml coverage.info --output-directory html/coverage
       continue-on-error: true
 
     - name: Copy index.html
