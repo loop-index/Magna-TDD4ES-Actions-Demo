@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-10-14 22:10:06</td>
+            <td class="headerValue">2024-10-14 22:18:25</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -107,15 +107,15 @@
 <span id="L45"><span class="lineNum">      45</span>              :     virtual MockActualCall&amp; withName(const SimpleString&amp; name)=0;</span>
 <span id="L46"><span class="lineNum">      46</span>              :     virtual MockActualCall&amp; withCallOrder(unsigned int callOrder)=0;</span>
 <span id="L47"><span class="lineNum">      47</span>              :     MockActualCall&amp; withParameter(const SimpleString&amp; name, bool value) { return withBoolParameter(name, value); }</span>
-<span id="L48"><span class="lineNum">      48</span> <span class="tlaGNC tlaBgGNC">          18 :     MockActualCall&amp; withParameter(const SimpleString&amp; name, int value) { return withIntParameter(name, value); }</span></span>
-<span id="L49"><span class="lineNum">      49</span> <span class="tlaGNC">          20 :     MockActualCall&amp; withParameter(const SimpleString&amp; name, unsigned int value) { return withUnsignedIntParameter(name, value); }</span></span>
+<span id="L48"><span class="lineNum">      48</span> <span class="tlaGNC tlaBgGNC">           9 :     MockActualCall&amp; withParameter(const SimpleString&amp; name, int value) { return withIntParameter(name, value); }</span></span>
+<span id="L49"><span class="lineNum">      49</span> <span class="tlaGNC">          10 :     MockActualCall&amp; withParameter(const SimpleString&amp; name, unsigned int value) { return withUnsignedIntParameter(name, value); }</span></span>
 <span id="L50"><span class="lineNum">      50</span>              :     MockActualCall&amp; withParameter(const SimpleString&amp; name, long int value) { return withLongIntParameter(name, value); }</span>
-<span id="L51"><span class="lineNum">      51</span> <span class="tlaGNC">          24 :     MockActualCall&amp; withParameter(const SimpleString&amp; name, unsigned long int value) { return withUnsignedLongIntParameter(name, value); }</span></span>
+<span id="L51"><span class="lineNum">      51</span> <span class="tlaGNC">          12 :     MockActualCall&amp; withParameter(const SimpleString&amp; name, unsigned long int value) { return withUnsignedLongIntParameter(name, value); }</span></span>
 <span id="L52"><span class="lineNum">      52</span>              :     MockActualCall&amp; withParameter(const SimpleString&amp; name, cpputest_longlong value) { return withLongLongIntParameter(name, value); }</span>
 <span id="L53"><span class="lineNum">      53</span>              :     MockActualCall&amp; withParameter(const SimpleString&amp; name, cpputest_ulonglong value) { return withUnsignedLongLongIntParameter(name, value); }</span>
 <span id="L54"><span class="lineNum">      54</span>              :     MockActualCall&amp; withParameter(const SimpleString&amp; name, double value) { return withDoubleParameter(name, value); }</span>
-<span id="L55"><span class="lineNum">      55</span> <span class="tlaGNC">          36 :     MockActualCall&amp; withParameter(const SimpleString&amp; name, const char* value) { return withStringParameter(name, value); }</span></span>
-<span id="L56"><span class="lineNum">      56</span> <span class="tlaGNC">         126 :     MockActualCall&amp; withParameter(const SimpleString&amp; name, void* value) { return withPointerParameter(name, value); }</span></span>
+<span id="L55"><span class="lineNum">      55</span> <span class="tlaGNC">          18 :     MockActualCall&amp; withParameter(const SimpleString&amp; name, const char* value) { return withStringParameter(name, value); }</span></span>
+<span id="L56"><span class="lineNum">      56</span> <span class="tlaGNC">          63 :     MockActualCall&amp; withParameter(const SimpleString&amp; name, void* value) { return withPointerParameter(name, value); }</span></span>
 <span id="L57"><span class="lineNum">      57</span>              :     MockActualCall&amp; withParameter(const SimpleString&amp; name, void (*value)()) { return withFunctionPointerParameter(name, value); }</span>
 <span id="L58"><span class="lineNum">      58</span>              :     MockActualCall&amp; withParameter(const SimpleString&amp; name, const void* value) { return withConstPointerParameter(name, value); }</span>
 <span id="L59"><span class="lineNum">      59</span>              :     MockActualCall&amp; withParameter(const SimpleString&amp; name, const unsigned char* value, size_t size) { return withMemoryBufferParameter(name, value, size); }</span>
