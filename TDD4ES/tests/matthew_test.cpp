@@ -31,7 +31,7 @@ TEST_GROUP(write_output_image_yuv422_8bit)
 
     void teardown() {
                 mock().clear();
-    }
+    } 
 };  
 
 TEST(write_output_image_yuv422_8bit, PassWriteFile)
