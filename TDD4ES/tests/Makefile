@@ -30,6 +30,17 @@ TARGET = all_tests
 $(TARGET): $(SRCS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $(TARGET) $(SRCS) $(LD_LIBRARIES)
 
+build: clean
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $(TARGET) $(SRCS) $(LD_LIBRARIES)
+	mkdir -p xml
+	mkdir -p html
+
+run: build
+	-cd xml/; ../$(TARGET) -ojunit -v -c -k TDD4ES.Demo
+
+report: run
+	ant convert
+
 # Clean target
 clean:
 	rm -f $(TARGET)
@@ -38,8 +49,3 @@ clean:
 	rm -f *.info
 	rm -rf html/
 	rm -rf xml/
-
-report: $(TARGET)
-	mkdir -p xml
-	-cd xml/; ../$(TARGET) -ojunit -v -c -k TDD4ES.Demo
-	ant convert
