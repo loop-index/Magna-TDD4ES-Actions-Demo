@@ -65,10 +65,10 @@ jobs:
     - name: Make CppUTest tests
       run: make -C TDD4ES/tests -B -f tmpMakefile.mk
 
-    - name: Run CppUTests
-      working-directory: TDD4ES/tests
+    - name: Run tests
       run: |
-        ./all_tests -c -vv
+        echo "Running test cases"
+        ./TDD4ES/tests/ez_test.testcase
       continue-on-error: true
 
     - name: Upload test results
