@@ -106,7 +106,7 @@ jobs:
     #     path: TDD4ES/tests
 
   generate-reports:
-    # needs: [build-and-test-normal]
+    needs: [build-and-test-normal]
     runs-on: ubuntu-latest
     permissions:
       contents: read
