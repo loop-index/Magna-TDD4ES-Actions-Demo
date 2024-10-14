@@ -9,7 +9,7 @@ const char* TIVX_TARGET_MCU2_0;
 
 
 
-//Implementation of write_output_image_yuv422_8bit function
+// Implementation of write_output_image_yuv422_8bit function
 vx_int32 write_output_image_yuv422_8bit(char * file_name, vx_image out_yuv)   
 { 
     FILE * fp = fopen(file_name, "wb");
@@ -32,7 +32,7 @@ TEST_GROUP(write_output_image_yuv422_8bit)
     void teardown() {
                 mock().clear();
     } 
-};  
+};   
 
 TEST(write_output_image_yuv422_8bit, PassWriteFile)
 {   
