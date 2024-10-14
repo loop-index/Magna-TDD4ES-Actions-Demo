@@ -29,11 +29,11 @@ jobs:
         ./all_tests -c -vv
       continue-on-error: true
 
-    - name: Upload test results
-      uses: actions/upload-artifact@v4
-      with:
-        name: test-results-a
-        path: TDD4ES/tests
+    # - name: Upload test results
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: test-results-a
+    #     path: TDD4ES/tests
 
   build-and-test-ez-optimized:
     runs-on: ubuntu-latest
@@ -65,11 +65,11 @@ jobs:
     - name: Make CppUTest tests
       run: make -C TDD4ES/tests -B -f tmpMakefile.mk
 
-    # - name: Run CppUTests
-    #   working-directory: TDD4ES/tests
-    #   run: |
-    #     ./all_tests -c -vv
-    #   continue-on-error: true
+    - name: Run CppUTests
+      working-directory: TDD4ES/tests
+      run: |
+        ./all_tests -c -vv
+      continue-on-error: true
 
     # - name: Upload test results
     #   uses: actions/upload-artifact@v4
@@ -93,11 +93,11 @@ jobs:
     - name: Make CppUTest tests
       run: make -C TDD4ES/tests -B
 
-    # - name: Run CppUTests
-    #   working-directory: TDD4ES/tests
-    #   run: |
-    #     ./all_tests -c -vv
-    #   continue-on-error: true
+    - name: Run CppUTests
+      working-directory: TDD4ES/tests
+      run: |
+        ./all_tests -c -vv
+      continue-on-error: true
 
     # - name: Upload test results
     #   uses: actions/upload-artifact@v4
@@ -106,27 +106,30 @@ jobs:
     #     path: TDD4ES/tests
 
   generate-reports:
-    needs: [build-and-test-normal, build-and-test-ez-optimized, build-and-test-cache]
+    needs: [build-and-test-normal]
     runs-on: ubuntu-latest
     permissions: read-all
 
     steps:
-    - name: Download test results
-      uses: actions/download-artifact@v4
-      with:
-        name: test-results-a
-        path: TDD4ES/tests
+    # - name: Download test results
+    #   uses: actions/download-artifact@v4
+    #   with:
+    #     name: test-results-a
+    #     path: TDD4ES/tests
 
     - name: Set up dependencies
       uses: awalsh128/cache-apt-pkgs-action@latest
       with: 
-        packages: lcov ant
+        packages: gcc g++ make cpputest lcov ant
         version: 2.0
 
     - name: Create output directories
       run: |
         mkdir -p TDD4ES/tests/html
         mkdir -p TDD4ES/tests/xml
+
+    - name: Make CppUTest tests
+      run: make -C TDD4ES/tests -B
 
     - name: Generate test report
       working-directory: TDD4ES/tests/xml
