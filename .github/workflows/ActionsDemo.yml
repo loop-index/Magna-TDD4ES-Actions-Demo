@@ -115,17 +115,20 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Download test results
-      uses: actions/download-artifact@v4
-      with:
-        name: test-results-c
-        path: TDD4ES/tests
-
     - name: Set up dependencies
       uses: awalsh128/cache-apt-pkgs-action@latest
       with: 
-        packages: lcov ant
-        version: 2.0
+        packages: gcc g++ make cpputest lcov ant
+        version: 1.0
+  
+    - name: Make CppUTest tests
+      run: make -C TDD4ES/tests -B
+
+    - name: Run CppUTests
+      working-directory: TDD4ES/tests
+      run: |
+        ./all_tests -c -vv
+      continue-on-error: true
 
     - name: Create output directories
       run: |
