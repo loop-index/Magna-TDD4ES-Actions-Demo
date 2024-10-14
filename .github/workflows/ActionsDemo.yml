@@ -63,7 +63,7 @@ jobs:
         cd ../..
     
     - name: Make CppUTest tests
-      run: make -C TDD4ES/tests -B
+      run: make -C TDD4ES/tests -B -f tmpMakefile.mk
 
     - name: Run CppUTests
       working-directory: TDD4ES/tests
