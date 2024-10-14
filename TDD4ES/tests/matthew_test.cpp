@@ -69,15 +69,15 @@ TEST_GROUP(fail_demo)
     }
 };
 
-TEST(fail_demo, FailTest)
-{
-    FAIL("This is a fail test");
-}
+// TEST(fail_demo, FailTest)
+// {
+//     FAIL("This is a fail test");
+// }
 
-TEST(fail_demo, MemoryLeakTest)
-{
-    int* ptr = (int*)malloc(sizeof(int));
-}
+// TEST(fail_demo, MemoryLeakTest)
+// {
+//     int* ptr = (int*)malloc(sizeof(int));
+// }
 
 //implementation of app_send_test_frame function
 
