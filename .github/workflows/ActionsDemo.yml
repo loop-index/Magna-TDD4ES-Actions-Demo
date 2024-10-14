@@ -138,7 +138,7 @@ jobs:
     - name: Generate test report
       working-directory: TDD4ES/tests
       run: |
-        ./all_tests -c -vv -ojunit
+        ./all_tests -c -v -ojunit
       continue-on-error: true
 
     - name: Convert test report
