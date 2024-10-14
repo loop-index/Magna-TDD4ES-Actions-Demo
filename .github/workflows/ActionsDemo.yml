@@ -29,11 +29,11 @@ jobs:
         ./all_tests -c -vv
       continue-on-error: true
 
-    # - name: Upload test results
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: test-results-a
-    #     path: TDD4ES/tests
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results-a
+        path: TDD4ES/tests
 
   build-and-test-ez-optimized:
     runs-on: ubuntu-latest
@@ -71,11 +71,11 @@ jobs:
         ./all_tests -c -vv
       continue-on-error: true
 
-    # - name: Upload test results
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: test-results-b
-    #     path: TDD4ES/tests
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results-b
+        path: TDD4ES/tests
 
   build-and-test-cache:
     runs-on: ubuntu-latest
@@ -99,11 +99,11 @@ jobs:
         ./all_tests -c -vv
       continue-on-error: true
 
-    # - name: Upload test results
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: test-results-c
-    #     path: TDD4ES/tests
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results-c
+        path: TDD4ES/tests
 
   generate-reports:
     needs: [build-and-test-normal]
