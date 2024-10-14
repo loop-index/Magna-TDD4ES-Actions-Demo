@@ -77,36 +77,36 @@ jobs:
         name: test-results-b
         path: TDD4ES/tests
 
-  build-and-test-cache:
-    runs-on: ubuntu-latest
+  # build-and-test-cache:
+  #   runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+  #   steps:
+  #   - name: Checkout
+  #     uses: actions/checkout@v4
 
-    - name: Set up dependencies
-      uses: awalsh128/cache-apt-pkgs-action@latest
-      with: 
-        packages: gcc g++ make cpputest
-        version: 1.0
+  #   - name: Set up dependencies
+  #     uses: awalsh128/cache-apt-pkgs-action@latest
+  #     with: 
+  #       packages: gcc g++ make cpputest
+  #       version: 1.0
   
-    - name: Make CppUTest tests
-      run: make -C TDD4ES/tests -B
+  #   - name: Make CppUTest tests
+  #     run: make -C TDD4ES/tests -B
 
-    - name: Run CppUTests
-      working-directory: TDD4ES/tests
-      run: |
-        ./all_tests -c -vv
-      continue-on-error: true
+  #   - name: Run CppUTests
+  #     working-directory: TDD4ES/tests
+  #     run: |
+  #       ./all_tests -c -vv
+  #     continue-on-error: true
 
-    - name: Upload test results
-      uses: actions/upload-artifact@v4
-      with:
-        name: test-results-c
-        path: TDD4ES/tests
+  #   - name: Upload test results
+  #     uses: actions/upload-artifact@v4
+  #     with:
+  #       name: test-results-c
+  #       path: TDD4ES/tests
 
   generate-reports:
-    needs: [build-and-test-cache]
+    needs: [build-and-test-normal, build-and-test-ez-optimized]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -124,11 +124,11 @@ jobs:
     - name: Make CppUTest tests
       run: make -C TDD4ES/tests -B
 
-    - name: Run CppUTests
-      working-directory: TDD4ES/tests
-      run: |
-        ./all_tests -c -vv
-      continue-on-error: true
+    # - name: Run CppUTests
+    #   working-directory: TDD4ES/tests
+    #   run: |
+    #     ./all_tests -c -vv
+    #   continue-on-error: true
 
     - name: Create output directories
       run: |
