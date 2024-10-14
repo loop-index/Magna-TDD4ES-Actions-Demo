@@ -74,7 +74,7 @@ TEST_GROUP(fail_demo)
 //     FAIL("This is a fail test"); 
 // } 
 
-// TEST(fail_demo, MemoryLeakTest)
+// TEST(fail_demo, MemoryLeakTest) 
 // {
 //     int* ptr = (int*)malloc(sizeof(int));
 // }
