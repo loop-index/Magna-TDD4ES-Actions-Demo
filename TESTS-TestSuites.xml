@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="1" hostname="localhost" id="0" name="app_create_aewb_test" package="" tests="3" time="0.001" timestamp="2024-10-09T21:25:37">
+  <testsuite errors="0" failures="1" hostname="localhost" id="0" name="app_create_aewb_test" package="" tests="3" time="0.000" timestamp="2024-10-09T21:19:01">
     <properties>
 </properties>
 
-    <testcase assertions="25" classname="app_create_aewb_test" file="matthew_test.cpp" line="366" name="appIssGetDCCBuff2ANotSucess" time="0.001">
+    <testcase assertions="25" classname="app_create_aewb_test" file="matthew_test.cpp" line="366" name="appIssGetDCCBuff2ANotSucess" time="0.000">
       <failure message="matthew_test.cpp:422: expected &lt;1&gt;{newline} but was  &lt;0&gt;{newline} difference starts at position 0 at: &lt;          0         &gt;{newline}                                                ^" type="AssertionFailedError">
 </failure>
 
@@ -21,7 +21,7 @@
     <system-err />
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="localhost" id="1" name="app_send_test_frame" package="" tests="2" time="0.000" timestamp="2024-10-09T21:25:37">
+  <testsuite errors="0" failures="0" hostname="localhost" id="1" name="app_send_test_frame" package="" tests="2" time="0.000" timestamp="2024-10-09T21:19:01">
     <properties>
 </properties>
 
@@ -36,7 +36,7 @@
     <system-err />
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="localhost" id="2" name="write_output_image_yuv422_8bit" package="" tests="2" time="0.000" timestamp="2024-10-09T21:25:37">
+  <testsuite errors="0" failures="0" hostname="localhost" id="2" name="write_output_image_yuv422_8bit" package="" tests="2" time="0.000" timestamp="2024-10-09T21:19:01">
     <properties>
 </properties>
 
