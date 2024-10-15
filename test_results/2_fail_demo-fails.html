@@ -1,13 +1,13 @@
 <html xmlns:string="xalan://java.lang.String" xmlns:lxslt="http://xml.apache.org/xslt">
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Unit Test Results: app_create_aewb_test</title>
+        <title>Unit Test Results: fail_demo</title>
         <link rel="stylesheet" type="text/css" title="Style" href="stylesheet.css">
         <script type="text/javascript" language="JavaScript">
         var TestCases = new Array();
         var cur;
         
-    cur = TestCases['.app_create_aewb_test'] = new Array();
+    cur = TestCases['.fail_demo'] = new Array();
     </script><script type="text/javascript" language="JavaScript">
         function displayProperties (name) {
           var win = window.open('','JUnitSystemProperties','scrollbars=1,resizable=1');
@@ -42,17 +42,17 @@
         <h1>Unit Test Results.</h1>
         <table width="100%">
             <tr>
-                <td align="left"></td><td align="right">Designed for use with <a href="https://www.junit.org/">JUnit</a> and <a href="https://ant.apache.org/">Ant</a>.</td>
+                <td align="left"></td>
             </tr>
         </table>
         <hr size="1">
-        <h3>Class app_create_aewb_test</h3>
+        <h3>Test Group fail_demo</h3>
         <table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
             <tr valign="top">
                 <th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th>Skipped</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
             </tr>
             <tr valign="top" class="Failure">
-                <td><a title="Display all tests" href="0_app_create_aewb_test.html">app_create_aewb_test</a></td><td><a title="Display all tests" href="0_app_create_aewb_test.html">3</a></td><td>0</td><td><a title="Display only failures" href="0_app_create_aewb_test-fails.html">1</a></td><td></td><td>0.000</td><td>2024-10-09T21:19:01</td><td>localhost</td>
+                <td><a title="Display all tests" href="2_fail_demo.html">fail_demo</a></td><td><a title="Display all tests" href="2_fail_demo.html">2</a></td><td>0</td><td><a title="Display only failures" href="2_fail_demo-fails.html">2</a></td><td></td><td>0.000</td><td>2024-10-10T02:34:46</td><td>localhost</td>
             </tr>
         </table>
         <h2>Failures</h2>
@@ -61,7 +61,15 @@
                 <th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
             </tr>
             <tr valign="top" class="Failure">
-                <td><a name="appIssGetDCCBuff2ANotSucess"></a>appIssGetDCCBuff2ANotSucess</td><td>Failure</td><td>matthew_test.cpp:422: expected &lt;1&gt;{newline} but was  &lt;0&gt;{newline} difference starts at position 0 at: &lt;          0         &gt;{newline}                                                ^
+                <td><a name="MemoryLeakTest"></a>MemoryLeakTest</td><td>Failure</td><td>matthew_test.cpp:77: Memory leak(s) found.{newline}Alloc num (431) Leak size: 4 Allocated at: matthew_test.cpp and line: 79. Type: "malloc"{newline} Memory: &lt;0x55a893c92110&gt; Content:{newline}    0000: 12 24 40 c9                                      |.$@.|{newline}Total number of leaks:  1{newline}NOTE:{newline} Memory leak reports about malloc and free can be caused by allocating using the cpputest version of malloc,{newline} but deallocate using the standard free.{newline} If this is the case, check whether your malloc/free replacements are working (#define malloc cpputest_malloc etc).{newline}
+                    <br>
+                    <br>
+                    <code>
+                        <br>
+                    </code></td><td>0.000</td>
+            </tr>
+            <tr valign="top" class="Failure">
+                <td><a name="FailTest"></a>FailTest</td><td>Failure</td><td>matthew_test.cpp:74: This is a fail test
                     <br>
                     <br>
                     <code>
@@ -70,7 +78,7 @@
             </tr>
         </table>
         <div class="Properties">
-            <a href="javascript:displayProperties('.app_create_aewb_test');">
+            <a href="javascript:displayProperties('.fail_demo');">
                     Properties &raquo;
                 </a>
         </div>
