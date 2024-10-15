@@ -1,14 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MAGNA Test Reports</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+        integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <h1>Work in progress test report entrypoint!!</h1>
-    <a href="./test_results">Test results</a>
-    <br>
-    <a href="./coverage">Test coverage</a>
+
+<body style="margin: 0;">
+    <nav>
+        <div class="row" style="background-color: black; padding: 20px 0">
+            <div class="one columns"></div>
+            <div class="eleven columns">
+                <img src="https://www.magna.com/ResourcePackages/HighroadFramework/dist/images/logo_Magna-white.svg" height="40">
+                <br>
+                <strong style="color: white; font-weight: 800;">Testing Reports</strong>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="padding: 20px 0;">
+        <h2><strong>Available test reports</strong></h2>
+        <table class="u-full-width">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Results</th>
+                    <th>Coverage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10/11/2024</td>
+                    <td><a href="./test_results" class="button">View results</a></td>
+                    <td><a href="./coverage" class="button">View coverage</a></td>
+                </tr>
+                <tr>
+                    <td>10/10/2024</td>
+                    <td><a href="./test_results" class="button">View results</a></td>
+                    <td><a href="./coverage" class="button">View coverage</a></td>
+                </tr>
+                <tr>
+                    <td>10/09/2024</td>
+                    <td><a href="./test_results" class="button">View results</a></td>
+                    <td><a href="./coverage" class="button">View coverage</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <style>
+        .button {
+            margin: 0px;
+        }
+
+        td {
+            font-weight: 700;
+            vertical-align: middle;
+        }
+
+        th {
+            font-size: large;
+            font-weight: 800;
+        }
+    </style>
 </body>
+
 </html>
